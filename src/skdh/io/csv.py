@@ -362,7 +362,7 @@ class ReadCSV(BaseIO):
         # raw, fs = self.handle_timestamp_inconsistency(raw, fill_values)
 
         # get the time values and convert to seconds
-        time = time_series.dt.as_unit('s').astype(int64).to_numpy(copy=True)
+        time = time_series.dt.as_unit('s').to_numpy(copy=True)
         # first convert to 's' representation, then to int gives correct values
 
         data = {}
